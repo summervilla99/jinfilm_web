@@ -1,0 +1,19 @@
+{
+  "devDependencies": {
+    "@types/imagemin-webp": "^7.0.3",
+    "@types/node": "^20.11.5",
+    "@types/react": "^18.2.48",
+    "@types/react-dom": "^18.2.18",
+    "@vitejs/plugin-react": "^4.2.1",
+    "file-loader": "^6.2.0",
+    "vite-tsconfig-paths": "^4.3.1"
+  },
+  "dependencies": {
+    "imagemin": "^8.0.1",
+    "imagemin-webp": "^8.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.21.2",
+    "react-scripts": "^5.0.1"
+  }
+}

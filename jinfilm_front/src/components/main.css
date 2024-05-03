@@ -1,0 +1,704 @@
+@import url(https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css);
+
+@font-face {
+  font-family: "NanumMyeongjo-Regular"; /* 폰트 이름 설정 */
+  src: url("/static/myapp/webfonts/NanumMyeongjo-Regular.ttf")
+    format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "NanumMyeongjo-Bold"; /* 폰트 이름 설정 */
+  src: url("/static/myapp/webfonts/NanumMyeongjo-Bold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+html {
+  font-size: 100%; /* 기본 폰트 크기 제한 무시 */
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  /* font-family: 'NanumMyeongjo-Bold', sans-serif; */
+  letter-spacing: 0.5px;
+}
+
+.header {
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  /* height: 100vh; */
+}
+
+.top {
+  display: flex;
+  justify-content: center; /* 가로 가운데 정렬 */
+}
+
+#main-logo img {
+  width: 150px; /* 원하는 크기로 조정 */
+  height: auto; /* 높이 자동으로 조정 (비율 유지) */
+  /* padding-right: 73px; */
+}
+
+.menu {
+  justify-content: center;
+  font-size: 20px;
+  font-family: "NanumMyeongjo-regular", sans-serif;
+}
+
+.top-menu-list {
+  display: flex; /* Updated to create a horizontal menu */
+  list-style-type: none;
+  text-decoration: none;
+  padding: 0;
+  justify-content: center;
+  font-size: 20px;
+}
+
+.top-menu-link {
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  display: inline-block;
+}
+
+.top-menu-link:hover {
+  transform: skewX(-20deg); /* 마우스를 올렸을 때 -20도로 기울이기 */
+}
+
+/* .top-menu-link:hover .sub-menu {
+    display: block;
+} */
+
+.list-item {
+  margin-right: 150px; /* Adjust the spacing between menu items */
+  position: relative;
+  color: black;
+}
+
+.list-item:last-child {
+  margin-right: 0;
+}
+
+.sub-menu {
+  display: none; /* Updated to create a horizontal menu */
+  position: absolute;
+  /* 텍스트 뭐 안 씌워서 뜨게 하는 것 */
+  list-style-type: none;
+  /* text-decoration: none; */
+  top: calc(100% + 2px);
+  left: -42px;
+  white-space: nowrap;
+}
+
+.top-menu-link:hover .sub-menu {
+  display: block;
+}
+
+#artists-link {
+  position: relative; /* 부모 요소를 relative로 설정 */
+}
+
+.sub-menu a {
+  display: block;
+  text-decoration: none;
+  color: #333;
+  padding: 2px;
+}
+
+#main-logo img {
+  width: 150px;
+  height: auto;
+  margin-bottom: 0px;
+  margin-right: 18px;
+}
+
+/* 여기까지가 로고, 메뉴 기본 레이아웃
+    이 뒤로는 About 페이지임. */
+
+.paragraph {
+  max-width: 700px;
+  margin: 20px auto; /* Center the paragraph with some margin */
+  font-size: 1.3125rem;
+  line-height: 1.375;
+}
+
+.p_contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 10px;
+  font-size: 1.4375rem;
+  color: rgb(77, 74, 74);
+}
+
+.p_contact_1,
+.p_contact_2 {
+  max-width: 700px;
+  margin: 20px auto;
+  text-align: center;
+}
+
+.map a {
+  color: inherit;
+}
+
+.map a hover {
+  color: inherit;
+}
+
+/* 여기부터 Artists 페이지 */
+
+.artist_main {
+  display: flex;
+  align-items: flex-start;
+  padding-top: 13.75rem;
+  padding-left: 2rem;
+  justify-content: center;
+  /* vertical-align: top; */
+}
+
+.artist1 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-top: 4.375rem;
+}
+
+.artist1 p {
+  margin-left: 60px;
+  margin-right: 20px;
+}
+
+.artist_img {
+  display: flex; /* flex 컨테이너로 변경 */
+  flex-direction: column; /* 세로로 정렬 */
+  align-items: flex-start; /* 위쪽 정렬 */
+  margin-top: 90px;
+  margin-left: 140px; /* 조절 가능한 여백 추가 */
+}
+
+.artist_img img {
+  max-width: 500px; /* 18.75rem; */
+  height: 100%; /* 20.75rem; */
+  margin-left: 10px;
+  margin-right: 60px;
+}
+
+.photo_or_video {
+  display: flex;
+  list-style-type: none;
+  text-decoration: none;
+  padding: 0;
+  justify-content: center;
+  font-size: 20px;
+  padding-top: 100px;
+}
+
+#photo {
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  display: inline-block;
+}
+
+#photo:hover {
+  transform: skewX(-20deg); /* 마우스를 올렸을 때 -20도로 기울이기 */
+}
+
+#video {
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  display: inline-block;
+}
+
+#video:hover {
+  transform: skewX(-20deg); /* 마우스를 올렸을 때 -20도로 기울이기 */
+}
+
+#separator {
+  padding-left: 10px;
+  padding-right: 10px;
+  padding: 0px 15px 0px 15px;
+}
+
+.concept_of_photo,
+.concept_of_video {
+  display: flex;
+  list-style-type: none;
+  text-decoration: none;
+  padding-left: 4.65rem;
+  font-size: 20px;
+  padding-top: 100px;
+}
+
+#profile_menu,
+#fashion_menu,
+#snap_menu,
+#ad_menu {
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+#profile_menu:hover,
+#fashion_menu:hover,
+#snap_menu:hover,
+#ad_menu:hover {
+  transform: skewX(-20deg);
+}
+
+#fashion_video_menu,
+#cinematic_menu,
+#sketch_menu #food_menu,
+#vlog_menu,
+#choreo_menu,
+#sing_act_menu {
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+#fashion_video_menu:hover,
+#cinematic_menu:hover,
+#sketch_menu:hover,
+#food_menu:hover,
+#vlog_menu:hover,
+#choreo_menu:hover,
+#sing_act_menu:hover {
+  transform: skewX(-20deg);
+}
+
+/* .top-menu-link {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    display: inline-block;
+}
+
+.top-menu-link:hover {
+    transform: skewX(-20deg);
+} */
+
+.portfolio {
+  align-items: baseline;
+  font-size: 20px;
+  padding-left: 4.65rem;
+  line-height: 1.5;
+}
+
+.profile1_img img {
+  width: 150px; /* 원하는 크기로 조정 */
+  height: auto; /* 높이 자동으로 조정 (비율 유지) */
+}
+
+.profile2_img img {
+  width: 150px;
+  height: auto;
+}
+
+.profile3_img img {
+  width: 150px;
+  height: auto;
+}
+
+.profile4_img img {
+  width: 150px;
+  height: auto;
+}
+
+.profile5_img img {
+  width: 150px;
+  height: auto;
+}
+
+.profile6_img img {
+  width: 150px;
+  height: auto;
+}
+
+.profile7_img img {
+  width: 150px;
+  height: auto;
+}
+
+.profile8_img img {
+  width: 150px;
+  height: auto;
+}
+
+.profile9_img img {
+  width: 150px;
+  height: auto;
+}
+
+.profile10_img img {
+  width: 150px;
+  height: auto;
+}
+
+#p_graphy {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+#job {
+  /* text-decoration: underline; */
+  font-style: italic;
+  font-weight: bold;
+}
+
+#name {
+  font-weight: bold;
+  font-size: 27px;
+
+  margin-top: 0;
+  margin-bottom: 0.5em;
+}
+
+#profile {
+  /* font-style: italic; */
+  margin-top: 20px;
+  margin-bottom: 0;
+  font-size: 20px;
+}
+
+#profile_list {
+  margin-top: 10px;
+  font-size: 20px;
+}
+
+#snap {
+  margin-top: 5px;
+  margin-bottom: 0;
+  font-size: 20px;
+}
+
+#snap_list {
+  margin-top: 10px;
+  font-size: 20px;
+}
+
+#ad {
+  margin-top: 5px;
+  margin-bottom: 0;
+  font-size: 20px;
+}
+
+#ad_list {
+  margin-top: 10px;
+  font-size: 20px;
+}
+
+#cv {
+  margin-top: 5rem;
+  margin-bottom: 0;
+  font-size: 20px;
+}
+
+#cv_list {
+  margin-top: 5px;
+  line-height: 1.375;
+  font-size: 20px;
+}
+
+#name,
+#profile,
+#snap,
+#ad,
+#cv {
+  font-weight: bold;
+}
+
+.fukuoka {
+  padding-top: 0;
+  margin-top: 0;
+}
+
+.snap1_img_container {
+  display: flex;
+  padding-top: 1.7rem;
+}
+
+.snap1_img_right {
+  display: flex;
+  flex-direction: column;
+}
+
+#y1 {
+  width: 550px;
+  height: auto;
+}
+
+#y2,
+#y3,
+#y4 {
+  width: 170px;
+  height: auto;
+  margin-right: 1.23rem;
+  padding-top: 1.7rem;
+}
+
+#y5 {
+  width: 250px;
+  height: auto;
+}
+
+#y6 {
+  width: 300px;
+  height: auto;
+  padding-left: 11px;
+  padding-top: -10px;
+}
+
+#y7 {
+  width: 270px;
+  height: auto;
+  padding-left: 30px;
+  padding-top: 20px;
+}
+
+#f1,
+#f4 {
+  width: 240px;
+  height: auto;
+  margin-right: 10px;
+  margin-top: 0px;
+}
+
+#f4 {
+  margin-top: 10px;
+}
+
+#f2,
+#f3,
+#f5,
+#f6,
+#f7,
+#f8,
+#f9,
+#f10,
+#f11,
+#f12 {
+  width: 240px;
+  height: auto;
+  margin-right: 20px;
+  margin-top: 10px;
+}
+
+#m1 {
+  margin-right: 15px;
+}
+
+#m1,
+#m2 {
+  width: 270px;
+  height: auto;
+}
+
+#m3,
+#m4 {
+  margin-right: 7.5px;
+}
+
+#m3,
+#m4,
+#m5 {
+  width: 180px;
+  height: auto;
+  margin-top: 10px;
+}
+
+#j1 {
+  width: 350px;
+  height: auto;
+  margin-right: 10px;
+}
+
+#j2,
+#j3,
+#j4 {
+  width: 350px;
+  height: auto;
+  margin-right: 10px;
+}
+
+#j5,
+#j6,
+#j7 {
+  width: 230px;
+  height: auto;
+  margin-right: 10px;
+}
+
+#j8,
+#j9,
+#j10 {
+  width: 230px;
+  height: auto;
+  margin-right: 10px;
+}
+
+#s1,
+#s2 {
+  width: 550px;
+}
+
+#s3 {
+  width: 270px;
+  margin-right: 10px;
+}
+
+#s4 {
+  width: 270px;
+}
+
+.advertising1 {
+}
+
+.advertising1_img img {
+  width: 250px;
+  height: auto;
+  margin-right: 10px;
+}
+
+.advertising2_img_1 img {
+  width: 400px;
+  height: auto;
+  margin-right: 10px;
+}
+
+.fashion1_img img {
+  width: 200px;
+  height: auto;
+  margin-right: 5px;
+}
+
+#fashion_21 {
+  width: 400px;
+  height: auto;
+
+}
+
+/* .advertising2_img_2 img {
+  width: 400px;
+  height: auto;
+  margin-right: 10px;
+} */
+
+
+@media (max-width: 480px) {
+  #header {
+    flex-direction: column; /* Change to a column layout on smaller screens */
+  }
+
+  .menu {
+    margin-right: 0; /* Remove right margin on smaller screens */
+  }
+
+  .list-item {
+    /* margin: 10px 0; Adjust spacing for smaller screens */
+    margin-right: 70px;
+  }
+
+  #main-logo img {
+    padding-right: 0; /* Remove padding on smaller screens */
+  }
+
+  .paragraph {
+    font-size: 20px; /* 작은 화면 크기에 대한 폰트 크기 조절 */
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .p_contact {
+    font-size: 16px;
+  }
+}
+
+/* 스마트폰 가로, 태블릿: 481px ~ 768px */
+@media (min-width: 481px) and (max-width: 768px) {
+  #header {
+    flex-direction: column; /* Change to a column layout on smaller screens */
+  }
+
+  .menu {
+    margin-right: 0; /* Remove right margin on smaller screens */
+  }
+
+  .list-item {
+    /* margin: 10px 0; Adjust spacing for smaller screens */
+    margin-right: 70px;
+  }
+
+  #main-logo img {
+    padding-right: 0; /* Remove padding on smaller screens */
+  }
+
+  .paragraph {
+    font-size: 20px; /* 작은 화면 크기에 대한 폰트 크기 조절 */
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .p_contact {
+    font-size: 20px;
+  }
+
+  .artist_img {
+    display: flex; /* flex 컨테이너로 변경 */
+    flex-direction: column; /* 세로로 정렬 */
+    align-items: flex-start; /* 위쪽 정렬 */
+    margin-top: 90px;
+    margin-left: 60px; /* 조절 가능한 여백 추가 */
+  }
+
+  .artist_img img {
+    max-width: 18.75rem;
+    height: 20.75rem;
+  }
+}
+
+/* 태블릿 가로, 노트북: 769px ~ 1279px */
+@media (min-width: 769px) and (max-width: 1279px) {
+  #header {
+    flex-direction: column; /* Change to a column layout on smaller screens */
+  }
+
+  .menu {
+    margin-right: 0; /* Remove right margin on smaller screens */
+  }
+
+  .list-item {
+    /* margin: 10px 0; Adjust spacing for smaller screens */
+    margin-right: 150px;
+  }
+
+  #main-logo img {
+    padding-right: 0; /* Remove padding on smaller screens */
+  }
+
+  .paragraph {
+    font-size: 20px; /* 작은 화면 크기에 대한 폰트 크기 조절 */
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .p_contact {
+    font-size: 1.2375rem;
+  }
+
+  .artist_img {
+    display: flex; /* flex 컨테이너로 변경 */
+    flex-direction: column; /* 세로로 정렬 */
+    align-items: flex-start; /* 위쪽 정렬 */
+    margin-top: 90px;
+    margin-left: 140px;
+  }
+
+  .artist_img img {
+    max-width: 500px; /* 18.75rem; */
+    height: 100%; /* 20.75rem; */
+  }
+}
